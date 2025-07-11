@@ -309,7 +309,7 @@ export default function TreeView({ treeData, isAdmin }) {
   };
 
   const handleDelete = async (id) => {
-    alert("sdfd")
+    alert("Are You want to delete this Child")
     try {
       const response = await fetch("/api/family", {
         method: "DELETE",
