@@ -1,0 +1,861 @@
+/* Base Styles */
+/* Fix scroller css  */
+
+/* body {
+  overflow: hidden;
+  
+} */
+
+.pageContainer {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f4f4;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: relative;
+  width: 100vw;
+}
+
+.loginContainer {
+  min-width: 400px;
+  min-height: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.formGroup {
+  margin-bottom: 1rem;
+  text-align: left;
+  margin-top: 30px;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.formGroup input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.loginButton {
+  width: 100%;
+  padding: 0.75rem;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.loginButton:hover {
+  background: #0069d9;
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  min-height: 85px;
+  padding: .8rem 2rem;
+  background: #fff;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.05);
+  flex-wrap: wrap;
+}
+
+.leftControls {
+  /* flex: 1; */
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  /* align-items: center; */
+  gap: 7px;
+}
+.countryControls{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.locationFilter {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding: 0.4rem 2.2rem 0.4rem 0.8rem;
+  font-size: 0.95rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: white;
+  background-image: url("data:image/svg+xml,%3Csvg fill='black' height='16' viewBox='0 0 24 24' width='16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.6rem center;
+  background-size: 1rem;
+  cursor: pointer;
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s;
+}
+
+.locationFilter:hover {
+  border-color: #999;
+}
+
+.locationFilter:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+  outline: none;
+}
+
+.centerControls {
+  flex: 2;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  margin-left: 1.2rem;
+}
+
+.titleGroup {
+  margin-bottom: 0.3rem;
+}
+
+.navTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  font-size: 0.85rem;
+  color: #888;
+  margin: 0;
+}
+
+.searchWrapper {
+  position: relative;
+  /* width: 100%; */
+  max-width: 400px;
+}
+
+.searchInput {
+  min-width: 80%;
+  padding: 0.4rem .5rem 0.4rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+.searchFound{
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+  align-items: center;
+  gap: 5px;
+}
+
+.searchIcon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #aaa;
+  font-size: 1.1rem;
+}
+
+.clearBtn {
+  position: absolute;
+  right: .8rem;
+  top: 45%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 1rem;
+  color: #999;
+  cursor: pointer;
+}
+
+
+.rightControls {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  align-items: center;
+}
+
+.zoomGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #f1f1f1;
+  padding: 0.3rem 0.5rem;
+  border-radius: 6px;
+}
+
+.zoomGroup button {
+  padding: 0.3rem 0.6rem;
+  background: #e0e0e0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* .logoutButton {
+  padding: 0.5rem 1rem;
+  background: #f8f8f8;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+
+.logoutButton:hover {
+  background: #e0e0e0;
+} */
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .leftControls,
+  .centerControls,
+  .rightControls {
+    width: 100%;
+    justify-content: center;
+    margin-top: 0.5rem;
+  }
+
+  .centerControls {
+    order: -1;
+  }
+
+  .searchWrapper {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+}
+
+/* Ensure these are included or updated */
+.filterLabel {
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 0.25rem;
+  font-weight: bold;
+}
+
+.searchWrapper {
+  position: relative;
+  /* display: flex;
+  align-items: center; */
+}
+
+.searchCountText {
+  font-size: 0.50rem;
+  color: #666;
+  margin-top: 1px;
+  margin-left: 4px;
+  line-height: 1;
+}
+
+.zoomLevel {
+  width: 40px;
+  text-align: center;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.resetButton {
+  padding: 0.5rem 1rem;
+  background: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  /* margin-left: 1rem; */
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.resetButton:hover {
+  background: #e0e0e0;
+}
+
+.adminBadge {
+  background: #28a745;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Tree Container */
+.treeContainer {
+  flex-grow: 1;
+  margin: 0 auto; 
+  overflow-x: visible;
+  padding: 2rem;
+  transition: transform 0.1s ease-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: grab;
+  touch-action: none;
+  will-change: transform;
+}
+
+.treeContainer:active {
+  cursor: grabbing;
+}
+
+
+/* Add smooth transitions */
+.memberCard, .children {
+  transition: all 0.1s ease-out;
+}
+
+/* Member Card Styles */
+.memberWrapper {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.memberCard {
+  padding: 16px;
+  border-radius: 12px;
+  width: 230px;
+  min-height: 150px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  margin: 0 auto ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.memberCard.male {
+  background-color: #e6f2ff;
+  border: 1px solid #b3d1ff;
+}
+
+.memberCard.female {
+  background-color: #ffe6f2;
+  border: 1px solid #ffb3d9;
+}
+
+.highlight {
+  box-shadow: 0 0 0 15px #ffda6b !important;
+}
+
+.memberCard.male.highlight {
+  background-color: #d9e9ff !important;
+}
+
+.memberCard.female.highlight {
+  background-color: #ffd9ec !important;
+}
+
+
+.memberCard img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid #007bff;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.name {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 8px 0;
+}
+
+.meta {
+  font-size: 14px;
+  color: #444;
+  margin: 5px 0;
+}
+
+.country {
+  font-size: 14px;
+  color: #007bff;
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+/* Children and Branch Styling */
+.children {
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: center;
+  margin-top: 40px;
+  position: relative;
+  /* Remove these lines if they exist */
+  /* border-top: 1px solid #999; */
+  /* &::before { content: ''; position: absolute; top: -30px; left: 0; right: 0; height: 2px; background: #999; } */
+}
+
+.childWrapper {
+  position: relative;
+  padding: 0 10px;
+}
+
+/* Keep only the vertical connector lines */
+  .childWrapper::before {
+    content: '';
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    width: 2px;
+    height: 40px;
+    background: #999;
+    transform: translateX(-50%);
+  }
+
+
+  
+.children::after {
+  /* content: ''; */
+  position: absolute;
+  top: 0;
+  height: 2px;
+  background: #999;
+  left: 0;
+  right: 0;
+}
+
+.childWrapper::after {
+  content: '';
+  position: absolute;
+  top: -40px;
+  height: 2px;
+  background: #999;
+}
+
+
+.childWrapper:first-child::after {
+  left: 50%;
+  right: 0;
+}
+
+.childWrapper:last-child::after {
+  left: 0;
+  right: 50%;
+}
+
+.childWrapper:not(:first-child):not(:last-child)::after {
+  left: 0;
+  right: 0;
+}
+.singleOnlyChild::after {
+  display: none !important;
+}
+
+.verticalLineWithArrow {
+  width: 2px;
+  height: 60px;
+  background-color: #999;
+  margin: 0 auto;
+  position: relative;
+}
+
+
+/* .verticalLineWithArrow::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 8px solid #999;
+} */
+
+.branchContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.verticalLine {
+  width: 2px;
+  height: 20px;
+  background: #555;
+}
+
+.horizontalLine {
+  height: 2px;
+  width: 100%;
+  background: #555;
+  margin-top: 10px;
+  position: relative;
+}
+
+
+
+/* Remove horizontal connector lines */
+.branchLineHorizontal {
+  display: none;
+}
+
+/* .children::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  height: 2px;
+  background: #999;
+  left: calc(25%);   
+  right: calc(25%);  
+} */
+
+
+
+/* Button Container */
+.buttonContainer {
+  margin-top: 8px;
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.buttonContainer button {
+  padding: 4px 8px;
+  font-size: 12px;
+  cursor: pointer;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.buttonContainer button:hover {
+  background: #f0f0f0;
+}
+
+/* Toggle Button */
+.toggleBtn {
+  font-size: 13px;
+  color: #007bff;
+  cursor: pointer;
+  margin-top: 6px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: all 0.3s;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid #ddd;
+}
+
+.toggleBtn:hover {
+  background-color: rgba(0, 123, 255, 0.1);
+}
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.modalContent {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  max-width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+.modalContent input,
+.modalContent select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.modalActions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.modalActions button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modalActions button:first-child {
+  background: #007bff;
+  color: white;
+}
+
+.modalActions button:last-child {
+  background: #f0f0f0;
+}
+
+/* Spinner Loader Styles */
+.spinnerOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(3px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top-color: #3498db;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .searchContainer {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .searchInput,
+  .locationFilter {
+    width: 100%;
+  }
+  
+  .zoomControls {
+    justify-content: center;
+    margin-top: 0.5rem;
+  }
+  
+  .treeContainer {
+    padding: 1rem;
+  }
+  
+  .memberCard {
+    width: 180px;
+    min-height: 260px;
+    margin: 20px auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .memberCard {
+    width: 160px;
+    min-height: 240px;
+    padding: 12px;
+  }
+  
+  .memberCard img {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .name {
+    font-size: 16px;
+  }
+  
+  .meta, .country {
+    font-size: 13px;
+  }
+}
+
+.loading {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.error {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+  color: #dc3545;
+  background: #ffeeee;
+  border: 1px solid #ffcccc;
+  border-radius: 4px;
+  margin: 2rem;
+}
+
+/* Public Header */
+.publicHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.adminLink {
+  padding: 0.5rem 1rem;
+  background: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.adminLink:hover {
+  background: #0069d9;
+}
+
+/* Admin Header */
+.adminHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logoutButton {
+  padding: 0.5rem 1rem;
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.logoutButton:hover {
+  background: #c82333;
+}
+
+.scrollWrapper {
+  overflow-y: clip;
+  /* max-height: fit-content; */
+  overflow-x: clip;
+  height: calc(100vh - 100px);
+  position: relative;
+}
+
+/* popover css  */
+
+.popover {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  min-width: 200px;
+  max-width: 300px;
+}
+
+.popoverContent h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.popoverContent p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.popoverContent strong {
+  color: #333;
+}
+
+.found{
+  font-size: 13px;
+  color: #888;
+}
+
+.generationRow {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.metaRow {
+  font-size: 14px;
+  color: #444;
+  gap: 5px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.noResult{
+  height: 300px;
+  /* background-color: #7EB1E7; */
+  /* border: 1px solid #5A98DB; */
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
+  align-items: center;
+  padding: 0px 30px;
+}
+
+.downArrow {
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 8px solid #999;
+  z-index: 3;
+}
+
