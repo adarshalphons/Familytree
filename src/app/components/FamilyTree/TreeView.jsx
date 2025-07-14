@@ -101,7 +101,7 @@ export default function TreeView({ treeData, isAdmin }) {
           const delta = dist - lastDist;
           setScale((prev) => {
             const next = prev + delta * 0.001;
-            return Math.min(Math.max(next, 0.1), 1); // Clamp zoom
+            return Math.min(Math.max(next, 0.01), 1); // Clamp zoom
           });
         }
         lastDist = dist;
