@@ -305,16 +305,17 @@
 /* Tree Container */
 .treeContainer {
   flex-grow: 1;
-  margin: 0 auto; 
-  overflow-x: visible;
+  margin: 0 auto;
   padding: 2rem;
-  transition: transform 0.1s ease-out;
   display: flex;
   flex-direction: column;
   align-items: center;
   cursor: grab;
   touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
   will-change: transform;
+  transition: transform 0.1s ease-out;
 }
 
 .treeContainer:active {
@@ -691,11 +692,74 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 760px) {
+  .navbar{
+    flex-wrap: nowrap;
+    padding: .8rem 2rem 2.4rem;
+    min-height: 180px;
+    gap: 0.5rem;
+  }
+  .navTitle{
+    font-size: 1.5rem;
+    margin-bottom: 0;
+  }
+  .subtitle{
+    font-size: .90rem;
+  }
+  .leftControls{
+    flex-direction: row;
+    /* margin-bottom: .3rem; */
+    margin-top: 0;
+    gap: 7px;
+    margin-left: 14px;
+  }
+  .countryControls{
+    gap: 7px;
+  }
+  .searchFound{
+    display: flex;
+    flex-direction: column;
+  }
+  .centerControls{
+  margin-left: 0;
+  }
+  .locationFilter{
+        padding: .5rem 1.5rem .5rem .8rem;
+        font-size: 0.65rem;
+        width:50%;
+        max-height: 30px;
+  }
+  .clearBtn{
+    right: 2.5rem;
+  }
+  .found{
+    font-size: 10px;
+    margin-right: 20px;
+  }
+  .resetButton{
+    font-size: .70rem;
+  }
+  .zoomGroup{
+    padding: .2rem 0.3rem;
+    gap: .3rem;
+  }
+  .rightControls{
+    margin-top: 0;
+  }
+  .searchWrapper{
+    padding: 0;
+  }
+  .searchInput{
+    padding: .5rem 1.5rem .5rem 1rem;
+    font-size: 0.70rem;
+    width: 30%;
+  }
+
   .memberCard {
-    width: 160px;
-    min-height: 240px;
+    width: 170px;
+    min-height: 220px;
     padding: 12px;
+    margin: 0 auto;
   }
   
   .memberCard img {
@@ -857,5 +921,58 @@
   border-right: 6px solid transparent;
   border-top: 8px solid #999;
   z-index: 3;
+}
+
+
+/* Delete Child Modal CSS  */
+
+.overlayDelete {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.deleteModal {
+  background-color: white;
+  padding: 24px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.deleteActions {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.cancelDelBtn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.confirmDelBtn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  background-color: #d32f2f;
+  color: white;
 }
 

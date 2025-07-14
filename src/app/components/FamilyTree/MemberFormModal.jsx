@@ -34,19 +34,21 @@ export default function MemberFormModal({
   //   }
   // }, [formData.country, countries]);
   useEffect(() => {
-  const countryObj = countries.find((c) => c.name === formData.country);
-  if (countryObj) {
-    const stateList = State.getStatesOfCountry(countryObj.isoCode);
-    setStates(stateList);
-    setPhoneCode(countryObj.phonecode);
-    setFormData((prev) => ({ ...prev, phonecode: countryObj.phonecode }));
-  } else {
-    setStates([]);
-    setPhoneCode("");
-    setFormData((prev) => ({ ...prev, phonecode: "" }));
-  }
-}, [formData.country, countries]);
-
+    const countryObj = countries.find((c) => c.name === formData.country);
+    if (countryObj) {
+      const stateList = State.getStatesOfCountry(countryObj.isoCode);
+      setStates(stateList);
+      setPhoneCode(countryObj.phonecode);
+      setFormData((prev) => ({
+        ...prev,
+        phonecode: `+${countryObj.phonecode}`,
+      }));
+    } else {
+      setStates([]);
+      setPhoneCode("");
+      setFormData((prev) => ({ ...prev, phonecode: "" }));
+    }
+  }, [formData.country, countries]);
 
   useEffect(() => {
     const countryObj = countries.find((c) => c.name === formData.country);
@@ -90,7 +92,6 @@ export default function MemberFormModal({
         {error && <p style={{ color: "red" }}>{error}</p>}
 
         <input
-        
           placeholder="Name *"
           value={formData.name || ""}
           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -100,9 +101,7 @@ export default function MemberFormModal({
           placeholder="Email"
           type="email"
           value={formData.email || ""}
-          onChange={(e) =>
-            setFormData({ ...formData, email: e.target.value })
-          }
+          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
         />
 
         {/* COUNTRY SELECT */}
@@ -182,11 +181,9 @@ export default function MemberFormModal({
 
         {/* GENDER SELECT */}
         <select
-         style={{width:"100%"}}
+          style={{ width: "100%" }}
           value={formData.gender || ""}
-          onChange={(e) =>
-            setFormData({ ...formData, gender: e.target.value })
-          }
+          onChange={(e) => setFormData({ ...formData, gender: e.target.value })}
         >
           <option value="">Select Gender *</option>
           <option value="male">Male</option>

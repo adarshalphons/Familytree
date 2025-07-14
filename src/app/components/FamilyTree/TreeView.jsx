@@ -4,6 +4,7 @@ import MemberCard from "./MemberCard";
 import Controls from "./Controls";
 import MemberFormModal from "./MemberFormModal";
 import styles from "../../styles/Family.module.css";
+import DeleteChildModal from "./DeleteChildModal";
 
 export default function TreeView({ treeData, isAdmin }) {
   const [scale, setScale] = useState(0.7);
@@ -15,8 +16,10 @@ export default function TreeView({ treeData, isAdmin }) {
   const [cities, setCities] = useState([]);
   const [countryCityMap, setCountryCityMap] = useState({});
   const [modalOpen, setModalOpen] = useState(false);
+  const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
   const [editMode, setEditMode] = useState(false);
   const [targetId, setTargetId] = useState(null);
+  const [targetDeleteId, setTargetDeleteId] = useState(null);
   const [searchCount, setSearchCount] = useState(0);
   const [processedTree, setProcessedTree] = useState(null);
   const [localTree, setLocalTree] = useState(treeData);
@@ -34,8 +37,6 @@ export default function TreeView({ treeData, isAdmin }) {
     gender: null,
     father: null,
   });
-  
-  console.log(formData,"pjjj")
   const treeContainerRef = useRef(null);
 
   useEffect(() => {
@@ -52,7 +53,9 @@ export default function TreeView({ treeData, isAdmin }) {
 
     let isDragging = false;
     let prev = { x: 0, y: 0 };
+    let lastDist = null; // For pinch zoom
 
+    // Mouse events
     const handleMouseDown = (e) => {
       isDragging = true;
       prev = { x: e.clientX, y: e.clientY };
@@ -74,14 +77,62 @@ export default function TreeView({ treeData, isAdmin }) {
       document.removeEventListener("mouseup", handleMouseUp);
     };
 
+    // Touch drag
+    const handleTouchStart = (e) => {
+      if (e.touches.length === 1) {
+        isDragging = true;
+        const touch = e.touches[0];
+        prev = { x: touch.clientX, y: touch.clientY };
+      } else if (e.touches.length === 2) {
+        lastDist = getDistance(e.touches); // start pinch
+      }
+    };
+
+    const handleTouchMove = (e) => {
+      if (e.touches.length === 1 && isDragging) {
+        const touch = e.touches[0];
+        const dx = touch.clientX - prev.x;
+        const dy = touch.clientY - prev.y;
+        prev = { x: touch.clientX, y: touch.clientY };
+        setPosition((prev) => ({ x: prev.x + dx, y: prev.y + dy }));
+      } else if (e.touches.length === 2) {
+        const dist = getDistance(e.touches);
+        if (lastDist !== null) {
+          const delta = dist - lastDist;
+          setScale((prev) => {
+            const next = prev + delta * 0.001;
+            return Math.min(Math.max(next, 0.1), 1); // Clamp zoom
+          });
+        }
+        lastDist = dist;
+      }
+    };
+
+    const handleTouchEnd = () => {
+      isDragging = false;
+      lastDist = null;
+    };
+
+    const getDistance = (touches) => {
+      const dx = touches[0].clientX - touches[1].clientX;
+      const dy = touches[0].clientY - touches[1].clientY;
+      return Math.sqrt(dx * dx + dy * dy);
+    };
+
     container.addEventListener("wheel", handleWheel, { passive: false });
     container.addEventListener("mousedown", handleMouseDown);
+    container.addEventListener("touchstart", handleTouchStart, { passive: false });
+    container.addEventListener("touchmove", handleTouchMove, { passive: false });
+    container.addEventListener("touchend", handleTouchEnd);
 
     return () => {
       container.removeEventListener("wheel", handleWheel);
       container.removeEventListener("mousedown", handleMouseDown);
       document.removeEventListener("mousemove", handleMouseMove);
       document.removeEventListener("mouseup", handleMouseUp);
+      container.removeEventListener("touchstart", handleTouchStart);
+      container.removeEventListener("touchmove", handleTouchMove);
+      container.removeEventListener("touchend", handleTouchEnd);
     };
   }, []);
 
@@ -261,6 +312,12 @@ export default function TreeView({ treeData, isAdmin }) {
     setModalOpen(true);
   };
 
+  const handleDeleteChild = (id) => {
+    console.log(id, "poa");
+    setTargetDeleteId(id);
+    setIsDeleteModalOpen(true);
+  };
+
   const handleSave = async () => {
     try {
       if (!editMode) {
@@ -308,14 +365,14 @@ export default function TreeView({ treeData, isAdmin }) {
     }
   };
 
-  const handleDelete = async (id) => {
-    alert("Are You want to delete this Child")
+  const handleDelete = async () => {
     try {
       const response = await fetch("/api/family", {
         method: "DELETE",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ id }),
+        body: JSON.stringify({ id: targetDeleteId }),
       });
+        setIsDeleteModalOpen(false);
 
       if (!response.ok) throw new Error("Failed to delete member");
 
@@ -356,6 +413,7 @@ export default function TreeView({ treeData, isAdmin }) {
             transformOrigin: "top center",
             cursor: "grab",
             transition: "transform 0.1s ease-out",
+            touchAction: "none", 
           }}
         >
           {!processedTree ? (
@@ -367,7 +425,7 @@ export default function TreeView({ treeData, isAdmin }) {
               member={processedTree}
               onAddChild={handleAddChild}
               onEdit={handleEdit}
-              onDelete={handleDelete}
+              onDelete={handleDeleteChild}
               isAdmin={isAdmin}
               isHighlighted={isHighlighted}
               searchTerm={searchTerm}
@@ -385,6 +443,14 @@ export default function TreeView({ treeData, isAdmin }) {
           editMode={editMode}
           formData={formData}
           setFormData={setFormData}
+        />
+      )}
+
+      {isDeleteModalOpen && (
+        <DeleteChildModal
+          open={isDeleteModalOpen}
+          onClose={() => setIsDeleteModalOpen(false)}
+          onConfirm={handleDelete}
         />
       )}
     </div>

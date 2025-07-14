@@ -73,7 +73,7 @@ export default function Controls({
             disabled={!locationFilter}
           >
             <option value="">
-              {locationFilter ? "All Cities" : "Select a country first"}
+              {locationFilter ? "All Cities" : "Select country first"}
             </option>
             {cities.map((city, index) => (
               <option key={index} value={city}>
