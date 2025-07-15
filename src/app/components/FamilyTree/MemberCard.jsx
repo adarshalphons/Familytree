@@ -21,6 +21,8 @@ export default function MemberCard({
   useEffect(() => {
     if (autoExpand && (member.shouldExpand || isHighlighted(member))) {
       setShowChildren(true);
+    } else if (autoExpand) {
+      setShowChildren(true);
     }
   }, [autoExpand, member.shouldExpand, isHighlighted, member]);
 

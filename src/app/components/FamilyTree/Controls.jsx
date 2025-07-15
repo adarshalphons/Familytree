@@ -19,6 +19,7 @@ export default function Controls({
   cities,
   cityFilter,
   setCityFilter,
+  handleExpandClick,
 }) {
   const router = useRouter();
   const { logout: contextLogout } = useAuth();
@@ -82,6 +83,7 @@ export default function Controls({
             ))}
           </select>
         </div>
+        {/* <div></div> */}
         <div className={styles.searchFound}>
           <div className={styles.searchWrapper}>
             <input
@@ -102,13 +104,16 @@ export default function Controls({
                 ✕
               </button>
             )}
-          </div>
+        </div>
+        <button
+        onClick={handleExpandClick}
+        className={styles.showfulltrees}>Show Full Tree</button>
+         </div>
           {searchTerm && (
             <p className={styles.found}>{`Found ${searchCount} result${
               searchCount === 1 ? "" : "s"
             }`}</p>
           )}
-        </div>
       </div>
 
       {/* Center Title & Search */}

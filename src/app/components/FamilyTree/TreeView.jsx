@@ -23,6 +23,7 @@ export default function TreeView({ treeData, isAdmin }) {
   const [searchCount, setSearchCount] = useState(0);
   const [processedTree, setProcessedTree] = useState(null);
   const [localTree, setLocalTree] = useState(treeData);
+  const [fullTree,setFullTree] = useState(false);
 
   const [formData, setFormData] = useState({
     name: "",
@@ -217,6 +218,29 @@ export default function TreeView({ treeData, isAdmin }) {
     return { markedTree: mark(member), matchCount };
   };
 
+  const markAllToExpand = (member) => {
+  const mark = (node) => {
+    return {
+      ...node,
+      shouldExpand: true,
+      children: (node.children || []).map(mark),
+    };
+  };
+
+  return  mark(member);
+};
+
+const handleExpandClick = () => {
+  let processedTree = localTree;
+      
+  if (!localTree) return;
+  const markedTree = markAllToExpand(processedTree);
+  setProcessedTree(markedTree);
+  if(markedTree){
+    setFullTree(true)
+  }
+};
+
   useEffect(() => {
     if (!localTree) return;
     let updatedTree = localTree;
@@ -395,6 +419,7 @@ export default function TreeView({ treeData, isAdmin }) {
         countries={countries}
         cities={cities}
         scale={scale}
+        handleExpandClick={handleExpandClick}
         setScale={setScale}
         isAdmin={isAdmin}
         onResetView={() => {
@@ -429,7 +454,7 @@ export default function TreeView({ treeData, isAdmin }) {
               isAdmin={isAdmin}
               isHighlighted={isHighlighted}
               searchTerm={searchTerm}
-              autoExpand={!!searchTerm || !!locationFilter || !!cityFilter}
+              autoExpand={!!searchTerm || !!locationFilter || !!cityFilter || fullTree}
             />
           )}
         </div>
