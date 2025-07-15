@@ -108,7 +108,7 @@ export default function Controls({
         </div>
         <button
         onClick={handleExpandClick}
-        className={styles.showfulltrees}>{fullTree ?  "Hide Full Tree" : "Show full tree"}</button>
+        className={styles.showfulltrees}>{fullTree ?  "Hide full tree" : "Show full tree"}</button>
          </div>
           {searchTerm && (
             <p className={styles.found}>{`Found ${searchCount} result${
