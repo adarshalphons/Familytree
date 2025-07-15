@@ -237,7 +237,7 @@ const handleExpandClick = () => {
   const markedTree = markAllToExpand(processedTree);
   setProcessedTree(markedTree);
   if(markedTree){
-    setFullTree(true)
+    setFullTree((prev) => !prev);
   }
 };
 
@@ -417,6 +417,7 @@ const handleExpandClick = () => {
         cityFilter={cityFilter}
         setCityFilter={setCityFilter}
         countries={countries}
+        fullTree={fullTree}
         cities={cities}
         scale={scale}
         handleExpandClick={handleExpandClick}

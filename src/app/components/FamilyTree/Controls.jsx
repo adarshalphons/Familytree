@@ -20,6 +20,7 @@ export default function Controls({
   cityFilter,
   setCityFilter,
   handleExpandClick,
+  fullTree=false
 }) {
   const router = useRouter();
   const { logout: contextLogout } = useAuth();
@@ -107,7 +108,7 @@ export default function Controls({
         </div>
         <button
         onClick={handleExpandClick}
-        className={styles.showfulltrees}>Show Full Tree</button>
+        className={styles.showfulltrees}>{fullTree ?  "Hide Full Tree" : "Show full tree"}</button>
          </div>
           {searchTerm && (
             <p className={styles.found}>{`Found ${searchCount} result${
