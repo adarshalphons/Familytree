@@ -67,7 +67,8 @@
                   "phonecode": "+91",
                   "gender": "male",
                   "father": "V.1.1.1.1.1",
-                  "children": []
+                  "children": [],
+                  "spouse": "Mereena"
                 },
                 {
                   "id": "V.1.1.1.1.1.2",
@@ -82,13 +83,15 @@
                   "phonecode": "+91",
                   "gender": "female",
                   "father": "V.1.1.1.1.1",
-                  "children": []
+                  "children": [],
+                  "spouse": "George Kaniyampadi"
                 }
-              ]
+              ],
+              "spouse": "Mercy Nellichery"
             },
             {
               "id": "V.1.1.1.1.2",
-              "name": "Sumrichan",
+              "name": "Sunnichan",
               "email": "person@email.com",
               "country": "India",
               "state": "Kerala",
@@ -113,7 +116,8 @@
                   "phonecode": "+91",
                   "gender": "male",
                   "father": "V.1.1.1.1.2",
-                  "children": []
+                  "children": [],
+                  "spouse": "Aengela Maniangattu"
                 },
                 {
                   "id": "V.1.1.1.1.2.2",
@@ -128,7 +132,8 @@
                   "phonecode": "+91",
                   "gender": "male",
                   "father": "V.1.1.1.1.2",
-                  "children": []
+                  "children": [],
+                  "spouse": "Vineetha Kottoor"
                 },
                 {
                   "id": "V.1.1.1.1.2.3",
@@ -143,9 +148,11 @@
                   "phonecode": "+91",
                   "gender": "female",
                   "father": "V.1.1.1.1.2",
-                  "children": []
+                  "children": [],
+                  "spouse": "Rajesh"
                 }
-              ]
+              ],
+              "spouse": "Mercy Plathottam"
             },
             {
               "id": "V.1.1.1.1.3",
@@ -157,7 +164,7 @@
               "img": "",
               "generation": 4,
               "phone": "9495104823",
-              "phonecode": "975",
+              "phonecode": "+975",
               "gender": "male",
               "father": "V.1.1.1.1",
               "children": [
@@ -191,7 +198,8 @@
                   "father": "V.1.1.1.1.3",
                   "children": []
                 }
-              ]
+              ],
+              "spouse": "Mariamma Thaiveettil"
             },
             {
               "id": "V.1.1.1.1.4",
@@ -267,7 +275,8 @@
                   "father": "V.1.1.1.1.5",
                   "children": []
                 }
-              ]
+              ],
+              "spouse": "Thomas Narithookil"
             },
             {
               "id": "V.1.1.1.1.6",
@@ -313,7 +322,8 @@
                   "father": "V.1.1.1.1.6",
                   "children": []
                 }
-              ]
+              ],
+              "spouse": "David Palathinkal"
             },
             {
               "id": "V.1.1.1.1.7",
@@ -359,7 +369,8 @@
                   "father": "V.1.1.1.1.7",
                   "children": []
                 }
-              ]
+              ],
+              "spouse": "Sojan Iyyamvelil"
             },
             {
               "id": "V.1.1.1.1.8",
@@ -405,7 +416,8 @@
                   "father": "V.1.1.1.1.8",
                   "children": []
                 }
-              ]
+              ],
+              "spouse": "Jose Chembuthara"
             },
             {
               "id": "V.1.1.1.1.9",
@@ -451,9 +463,11 @@
                   "father": "V.1.1.1.1.9",
                   "children": []
                 }
-              ]
+              ],
+              "spouse": "Babu Nellikunnathu"
             }
-          ]
+          ],
+          "spouse": "Mariyakutty Manayathuchery"
         },
         {
           "id": "V.1.1.1.2",
@@ -589,7 +603,8 @@
               "father": "V.1.1.1.2",
               "children": []
             }
-          ]
+          ],
+          "spouse": "Puthumana"
         },
         {
           "id": "V.1.1.1.3",
@@ -650,7 +665,8 @@
               "father": "V.1.1.1.3",
               "children": []
             }
-          ]
+          ],
+          "spouse": "Marettu"
         },
         {
           "id": "V.1.1.1.4",
@@ -741,7 +757,8 @@
               "father": "V.1.1.1.6",
               "children": []
             }
-          ]
+          ],
+          "spouse": "Powathikunnel"
         },
         {
           "id": "V.1.1.1.7",
@@ -847,9 +864,11 @@
               "father": "V.1.1.1.7",
               "children": []
             }
-          ]
+          ],
+          "spouse": "Poovathoor"
         }
-      ]
+      ],
+      "spouse": "Annamma Vettathu"
     },
     {
       "id": "V.1.1.2",
@@ -892,7 +911,8 @@
               "phonecode": "+91",
               "gender": "male",
               "father": "V.1.1.2.1",
-              "children": []
+              "children": [],
+              "spouse": "Susan"
             },
             {
               "id": "V.1.1.2.1.2",
@@ -907,7 +927,8 @@
               "phonecode": "+91",
               "gender": "female",
               "father": "V.1.1.2.1",
-              "children": []
+              "children": [],
+              "spouse": "Lalu"
             },
             {
               "id": "V.1.1.2.1.3",
@@ -922,7 +943,8 @@
               "phonecode": "+91",
               "gender": "female",
               "father": "V.1.1.2.1",
-              "children": []
+              "children": [],
+              "spouse": "Babu Olickal"
             },
             {
               "id": "V.1.1.2.1.4",
@@ -937,7 +959,8 @@
               "phonecode": "+91",
               "gender": "female",
               "father": "V.1.1.2.1",
-              "children": []
+              "children": [],
+              "spouse": "Philip"
             },
             {
               "id": "V.1.1.2.1.5",
@@ -952,7 +975,8 @@
               "phonecode": "+91",
               "gender": "female",
               "father": "V.1.1.2.1",
-              "children": []
+              "children": [],
+              "spouse": "Ajith Niramplackal"
             },
             {
               "id": "V.1.1.2.1.6",
@@ -967,9 +991,11 @@
               "phonecode": "+91",
               "gender": "female",
               "father": "V.1.1.2.1",
-              "children": []
+              "children": [],
+              "spouse": "Varghese"
             }
-          ]
+          ],
+          "spouse": "Kunjamma"
         },
         {
           "id": "V.1.1.2.2",
@@ -998,7 +1024,8 @@
               "phonecode": "+91",
               "gender": "male",
               "father": "V.1.1.2.2",
-              "children": []
+              "children": [],
+              "spouse": "Claramma Vadakekunnel"
             },
             {
               "id": "V.1.1.2.2.2",
@@ -1013,11 +1040,12 @@
               "phonecode": "+91",
               "gender": "male",
               "father": "V.1.1.2.2",
-              "children": []
+              "children": [],
+              "spouse": "Lucy Poovathinkal"
             },
             {
               "id": "V.1.1.2.2.3",
-              "name": "Sumi",
+              "name": "Sunni",
               "email": "person@email.com",
               "country": "India",
               "state": "Kerala",
@@ -1028,7 +1056,8 @@
               "phonecode": "+91",
               "gender": "male",
               "father": "V.1.1.2.2",
-              "children": []
+              "children": [],
+              "spouse": "Sheela Kochupurackal"
             },
             {
               "id": "V.1.1.2.2.4",
@@ -1043,7 +1072,8 @@
               "phonecode": "+91",
               "gender": "male",
               "father": "V.1.1.2.2",
-              "children": []
+              "children": [],
+              "spouse": "Moly Madapothinal"
             },
             {
               "id": "V.1.1.2.2.5",
@@ -1058,7 +1088,8 @@
               "phonecode": "+91",
               "gender": "male",
               "father": "V.1.1.2.2",
-              "children": []
+              "children": [],
+              "spouse": "Liza"
             },
             {
               "id": "V.1.1.2.2.6",
@@ -1105,7 +1136,8 @@
               "father": "V.1.1.2.2",
               "children": []
             }
-          ]
+          ],
+          "spouse": "Kuttiyamma Thuruthiparampil"
         },
         {
           "id": "V.1.1.2.3",
@@ -1134,7 +1166,8 @@
               "phonecode": "+91",
               "gender": "male",
               "father": "V.1.1.2.3",
-              "children": []
+              "children": [],
+              "spouse": "Sheela"
             },
             {
               "id": "V.1.1.2.3.2",
@@ -1149,7 +1182,8 @@
               "phonecode": "+91",
               "gender": "male",
               "father": "V.1.1.2.3",
-              "children": []
+              "children": [],
+              "spouse": "Joly Kizhakekara"
             },
             {
               "id": "V.1.1.2.3.3",
@@ -1164,7 +1198,8 @@
               "phonecode": "+91",
               "gender": "male",
               "father": "V.1.1.2.3",
-              "children": []
+              "children": [],
+              "spouse": "Anie"
             },
             {
               "id": "V.1.1.2.3.4",
@@ -1179,7 +1214,8 @@
               "phonecode": "+91",
               "gender": "female",
               "father": "V.1.1.2.3",
-              "children": []
+              "children": [],
+              "spouse": "Baby Kattakayam"
             },
             {
               "id": "V.1.1.2.3.5",
@@ -1194,7 +1230,8 @@
               "phonecode": "+91",
               "gender": "female",
               "father": "V.1.1.2.3",
-              "children": []
+              "children": [],
+              "spouse": "Mathew Parakkattu"
             },
             {
               "id": "V.1.1.2.3.6",
@@ -1209,7 +1246,8 @@
               "phonecode": "+91",
               "gender": "female",
               "father": "V.1.1.2.3",
-              "children": []
+              "children": [],
+              "spouse": "Mathew Mapparayil"
             },
             {
               "id": "V.1.1.2.3.7",
@@ -1224,9 +1262,11 @@
               "phonecode": "+91",
               "gender": "female",
               "father": "V.1.1.2.3",
-              "children": []
+              "children": [],
+              "spouse": "Joseph Parampil"
             }
-          ]
+          ],
+          "spouse": "Thankamma Pulinchuvallil"
         },
         {
           "id": "V.1.1.2.4",
@@ -1255,7 +1295,8 @@
               "phonecode": "+91",
               "gender": "male",
               "father": "V.1.1.2.4",
-              "children": []
+              "children": [],
+              "spouse": "Mercy Ambalathinal"
             },
             {
               "id": "V.1.1.2.4.2",
@@ -1270,7 +1311,8 @@
               "phonecode": "+91",
               "gender": "female",
               "father": "V.1.1.2.4",
-              "children": []
+              "children": [],
+              "spouse": "Siby Arackal"
             },
             {
               "id": "V.1.1.2.4.3",
@@ -1285,7 +1327,8 @@
               "phonecode": "+91",
               "gender": "female",
               "father": "V.1.1.2.4",
-              "children": []
+              "children": [],
+              "spouse": "Baby Kokampallil"
             },
             {
               "id": "V.1.1.2.4.4",
@@ -1300,9 +1343,11 @@
               "phonecode": "+91",
               "gender": "female",
               "father": "V.1.1.2.4",
-              "children": []
+              "children": [],
+              "spouse": "Mathew Thekkel"
             }
-          ]
+          ],
+          "spouse": "Akkamma Kallelil"
         },
         {
           "id": "V.1.1.2.5",
@@ -1331,7 +1376,8 @@
               "phonecode": "+91",
               "gender": "male",
               "father": "V.1.1.2.5",
-              "children": []
+              "children": [],
+              "spouse": "Sherly"
             },
             {
               "id": "V.1.1.2.5.2",
@@ -1346,7 +1392,8 @@
               "phonecode": "+91",
               "gender": "female",
               "father": "V.1.1.2.5",
-              "children": []
+              "children": [],
+              "spouse": "Rethan Waltervilla"
             },
             {
               "id": "V.1.1.2.5.3",
@@ -1361,7 +1408,8 @@
               "phonecode": "+91",
               "gender": "female",
               "father": "V.1.1.2.5",
-              "children": []
+              "children": [],
+              "spouse": "Manoj"
             },
             {
               "id": "V.1.1.2.5.4",
@@ -1376,9 +1424,11 @@
               "phonecode": "+91",
               "gender": "female",
               "father": "V.1.1.2.5",
-              "children": []
+              "children": [],
+              "spouse": "Martin Gracevilla"
             }
-          ]
+          ],
+          "spouse": "Thankamma Thekadayil"
         },
         {
           "id": "V.1.1.2.6",
@@ -1407,7 +1457,8 @@
               "phonecode": "+91",
               "gender": "male",
               "father": "V.1.1.2.6",
-              "children": []
+              "children": [],
+              "spouse": "Leena Banglowparambu"
             },
             {
               "id": "V.1.1.2.6.2",
@@ -1422,9 +1473,11 @@
               "phonecode": "+91",
               "gender": "female",
               "father": "V.1.1.2.6",
-              "children": []
+              "children": [],
+              "spouse": "Johnichan Thottathil"
             }
-          ]
+          ],
+          "spouse": "Thankamma Mangalathukarottu"
         },
         {
           "id": "V.1.1.2.7",
@@ -1453,9 +1506,11 @@
               "phonecode": "+91",
               "gender": "male",
               "father": "V.1.1.2.7",
-              "children": []
+              "children": [],
+              "spouse": "Claramma Vadakekunnel"
             }
-          ]
+          ],
+          "spouse": "Kannethu"
         },
         {
           "id": "V.1.1.2.8",
@@ -1467,7 +1522,7 @@
           "img": "",
           "generation": 3,
           "phone": "4253645321",
-          "phonecode": "+91",
+          "phonecode": "+1",
           "gender": "male",
           "father": "V.1.1.2",
           "children": [
@@ -1516,7 +1571,8 @@
               "father": "V.1.1.2.8",
               "children": []
             }
-          ]
+          ],
+          "spouse": "Vakachan Kizhakekara"
         },
         {
           "id": "V.1.1.2.9",
@@ -1577,7 +1633,8 @@
               "father": "V.1.1.2.9",
               "children": []
             }
-          ]
+          ],
+          "spouse": "Chacko Madelil"
         },
         {
           "id": "V.1.1.2.10",
@@ -1698,7 +1755,8 @@
               "father": "V.1.1.2.10",
               "children": []
             }
-          ]
+          ],
+          "spouse": "Varghese Pulinchuvallil"
         },
         {
           "id": "V.1.1.2.11",
@@ -1864,7 +1922,8 @@
               "father": "V.1.1.2.11",
               "children": []
             }
-          ]
+          ],
+          "spouse": "Mathews Urumbaykal"
         },
         {
           "id": "V.1.1.2.12",
@@ -1985,9 +2044,11 @@
               "father": "V.1.1.2.12",
               "children": []
             }
-          ]
+          ],
+          "spouse": "Stanislavoos Valliyattu"
         }
-      ]
+      ],
+      "spouse": "Thresiamma Thottathil"
     },
     {
       "id": "V.1.1.3",
@@ -1998,7 +2059,7 @@
       "city": "Agoura",
       "img": "",
       "generation": 2,
-      "phonecode": "1",
+      "phonecode": "+1",
       "phone": "",
       "gender": "male",
       "father": "V.1.1",
@@ -2012,7 +2073,7 @@
           "city": "Anchorage",
           "img": "",
           "generation": 3,
-          "phonecode": "1",
+          "phonecode": "+1",
           "phone": "",
           "gender": "male",
           "father": "V.1.1.3",
@@ -2044,7 +2105,8 @@
                   "phonecode": "+91",
                   "gender": "male",
                   "father": "V.1.1.3.1.1",
-                  "children": []
+                  "children": [],
+                  "spouse": "Sini"
                 },
                 {
                   "id": "V.1.1.3.1.1.2",
@@ -2059,7 +2121,8 @@
                   "phonecode": "+91",
                   "gender": "male",
                   "father": "V.1.1.3.1.1",
-                  "children": []
+                  "children": [],
+                  "spouse": "Suma"
                 },
                 {
                   "id": "V.1.1.3.1.1.3",
@@ -2074,7 +2137,8 @@
                   "phonecode": "+91",
                   "gender": "male",
                   "father": "V.1.1.3.1.1",
-                  "children": []
+                  "children": [],
+                  "spouse": "Adonia"
                 },
                 {
                   "id": "V.1.1.3.1.1.4",
@@ -2091,7 +2155,8 @@
                   "father": "V.1.1.3.1.1",
                   "children": []
                 }
-              ]
+              ],
+              "spouse": "Marykutty Vadakkemulakinal"
             },
             {
               "id": "V.1.1.3.1.2",
@@ -2120,7 +2185,8 @@
                   "phonecode": "+91",
                   "gender": "male",
                   "father": "V.1.1.3.1.2",
-                  "children": []
+                  "children": [],
+                  "spouse": "Thara"
                 },
                 {
                   "id": "V.1.1.3.1.2.2",
@@ -2137,7 +2203,8 @@
                   "father": "V.1.1.3.1.2",
                   "children": []
                 }
-              ]
+              ],
+              "spouse": "Marykutty Vadakedathu"
             },
             {
               "id": "V.1.1.3.1.3",
@@ -2166,7 +2233,8 @@
                   "phonecode": "+91",
                   "gender": "male",
                   "father": "V.1.1.3.1.3",
-                  "children": []
+                  "children": [],
+                  "spouse": "Lissy"
                 },
                 {
                   "id": "V.1.1.3.1.3.2",
@@ -2181,7 +2249,8 @@
                   "phonecode": "+91",
                   "gender": "male",
                   "father": "V.1.1.3.1.3",
-                  "children": []
+                  "children": [],
+                  "spouse": "Eeliya"
                 },
                 {
                   "id": "V.1.1.3.1.3.3",
@@ -2196,7 +2265,8 @@
                   "phonecode": "+91",
                   "gender": "male",
                   "father": "V.1.1.3.1.3",
-                  "children": []
+                  "children": [],
+                  "spouse": "Prasanna"
                 },
                 {
                   "id": "V.1.1.3.1.3.4",
@@ -2211,7 +2281,8 @@
                   "phonecode": "+91",
                   "gender": "male",
                   "father": "V.1.1.3.1.3",
-                  "children": []
+                  "children": [],
+                  "spouse": "Anisha"
                 },
                 {
                   "id": "V.1.1.3.1.3.5",
@@ -2228,7 +2299,8 @@
                   "father": "V.1.1.3.1.3",
                   "children": []
                 }
-              ]
+              ],
+              "spouse": "Aleyamma Randuplackal"
             },
             {
               "id": "V.1.1.3.1.4",
@@ -2258,7 +2330,8 @@
               "phonecode": "+91",
               "gender": "female",
               "father": "V.1.1.3.1",
-              "children": []
+              "children": [],
+              "spouse": "Makkil"
             },
             {
               "id": "V.1.1.3.1.6",
@@ -2273,9 +2346,11 @@
               "phonecode": "+91",
               "gender": "female",
               "father": "V.1.1.3.1",
-              "children": []
+              "children": [],
+              "spouse": "George"
             }
-          ]
+          ],
+          "spouse": "Thresiamma Vettikattu"
         },
         {
           "id": "V.1.1.3.2",
@@ -2335,7 +2410,8 @@
                   "father": "V.1.1.3.2.1",
                   "children": []
                 }
-              ]
+              ],
+              "spouse": "Latha"
             },
             {
               "id": "V.1.1.3.2.2",
@@ -2396,7 +2472,8 @@
                   "father": "V.1.1.3.2.2",
                   "children": []
                 }
-              ]
+              ],
+              "spouse": "Christy"
             },
             {
               "id": "V.1.1.3.2.3",
@@ -2442,7 +2519,8 @@
               "phonecode": "+91",
               "gender": "female",
               "father": "V.1.1.3.2",
-              "children": []
+              "children": [],
+              "spouse": "Paul"
             },
             {
               "id": "V.1.1.3.2.5",
@@ -2472,9 +2550,11 @@
               "phonecode": "+91",
               "gender": "female",
               "father": "V.1.1.3.2",
-              "children": []
+              "children": [],
+              "spouse": "Tom Kanjirathinkal"
             }
-          ]
+          ],
+          "spouse": "Thankam Adhikarathil"
         },
         {
           "id": "V.1.1.3.3",
@@ -2532,9 +2612,11 @@
                   "phonecode": "+91",
                   "gender": "female",
                   "father": "V.1.1.3.3.1",
-                  "children": []
+                  "children": [],
+                  "spouse": "Subhash"
                 }
-              ]
+              ],
+              "spouse": "Treesa Mangalapally"
             },
             {
               "id": "V.1.1.3.3.2",
@@ -2552,7 +2634,7 @@
               "children": [
                 {
                   "id": "V.1.1.3.3.2.1",
-                  "name": "[Son]",
+                  "name": "Joe",
                   "email": "person@email.com",
                   "country": "India",
                   "state": "Kerala",
@@ -2567,7 +2649,7 @@
                 },
                 {
                   "id": "V.1.1.3.3.2.2",
-                  "name": "[Daughter 1]",
+                  "name": "Ann",
                   "email": "person@email.com",
                   "country": "India",
                   "state": "Kerala",
@@ -2582,7 +2664,7 @@
                 },
                 {
                   "id": "V.1.1.3.3.2.3",
-                  "name": "[Daughter 2]",
+                  "name": "Treesa",
                   "email": "person@email.com",
                   "country": "India",
                   "state": "Kerala",
@@ -2597,7 +2679,7 @@
                 },
                 {
                   "id": "V.1.1.3.3.2.4",
-                  "name": "[Daughter 3]",
+                  "name": "Rose Mary",
                   "email": "person@email.com",
                   "country": "India",
                   "state": "Kerala",
@@ -2610,7 +2692,8 @@
                   "father": "V.1.1.3.3.2",
                   "children": []
                 }
-              ]
+              ],
+              "spouse": "Reena Kalathoor"
             },
             {
               "id": "V.1.1.3.3.3",
@@ -2625,7 +2708,8 @@
               "phonecode": "+91",
               "gender": "female",
               "father": "V.1.1.3.3",
-              "children": []
+              "children": [],
+              "spouse": "Sacharias"
             },
             {
               "id": "V.1.1.3.3.4",
@@ -2640,7 +2724,8 @@
               "phonecode": "+91",
               "gender": "female",
               "father": "V.1.1.3.3",
-              "children": []
+              "children": [],
+              "spouse": "Jose Uzhunnalil"
             },
             {
               "id": "V.1.1.3.3.5",
@@ -2655,9 +2740,11 @@
               "phonecode": "+91",
               "gender": "female",
               "father": "V.1.1.3.3",
-              "children": []
+              "children": [],
+              "spouse": "George Kulathunkal"
             }
-          ]
+          ],
+          "spouse": "Annamma Kandathinkara"
         },
         {
           "id": "V.1.1.3.4",
@@ -2778,7 +2865,8 @@
               "father": "V.1.1.3.4",
               "children": []
             }
-          ]
+          ],
+          "spouse": "Kallarackal"
         },
         {
           "id": "V.1.1.3.5",
@@ -2869,9 +2957,12 @@
               "father": "V.1.1.3.5",
               "children": []
             }
-          ]
+          ],
+          "spouse": "Srampickal"
         }
-      ]
+      ],
+      "spouse": "Mariamma Kuthukallunkal"
     }
-  ]
+  ],
+  "spouse": "Thresiamma Marattukalam"
 }

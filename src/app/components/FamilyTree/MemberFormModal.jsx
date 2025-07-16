@@ -96,6 +96,11 @@ export default function MemberFormModal({
           value={formData.name || ""}
           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
         />
+         <input
+          placeholder="Husband/Wife"
+          value={formData.spouse || ""}
+          onChange={(e) => setFormData({ ...formData, spouse: e.target.value })}
+        />
 
         <input
           placeholder="Email"

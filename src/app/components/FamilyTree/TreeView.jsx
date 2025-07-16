@@ -27,6 +27,7 @@ export default function TreeView({ treeData, isAdmin }) {
 
   const [formData, setFormData] = useState({
     name: "",
+    spouse:"",
     email: "",
     country: "",
     state: "",
@@ -315,6 +316,7 @@ const handleExpandClick = () => {
     setTargetId(parent.id);
     setFormData({
       name: "",
+      spouse: "",
       email: "",
       country:  "",
       state:  "",
