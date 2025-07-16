@@ -51,7 +51,7 @@ export default function MemberCard({
         data-country={member.country}
       >
         <div className={styles.name}>{member.name}</div>
-        <div className={styles.spouse}><i>{member.spouse}</i></div>
+        {member.spouse && <div className={styles.spouse}><i>+ {member.spouse}</i></div>}
         <div>{member.email}</div>
 
         {member.name !== "Filtered Results" && (
