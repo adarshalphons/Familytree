@@ -56,7 +56,7 @@ export default function MemberCard({
 
         {member.name !== "Filtered Results" && (
           <>
-            {(member.id === "V.1") ? "" : <div className={styles.generationRow}>
+            {member.generation !== 0  && <div className={styles.generationRow}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="14"
