@@ -56,7 +56,7 @@ export default function MemberCard({
 
         {member.name !== "Filtered Results" && (
           <>
-            <div className={styles.generationRow}>
+            {(member.id === "V.1") ? "" : <div className={styles.generationRow}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="14"
@@ -78,7 +78,7 @@ export default function MemberCard({
               <div className={styles.meta}>
                 <b>Gen {member.generation}</b>
               </div>
-            </div>
+            </div>}
             {member.country && (
               <div className={styles.metaRow}>
                 <svg
@@ -95,7 +95,7 @@ export default function MemberCard({
                   <path d="M12 2c2.5 2 4 6 4 10s-1.5 8-4 10c-2.5-2-4-6-4-10s1.5-8 4-10z" />
                 </svg>
 
-            <b>{member.country}</b>    
+                <b>{member.country}</b>
               </div>
             )}
             {member.city && (
@@ -112,18 +112,24 @@ export default function MemberCard({
                   <path d="M3 22V10l6-5 6 5v12H3zM21 22h-4V12h4v10z" />
                 </svg>
 
-              <b>{member.city}</b>  
+                <b>{member.city}</b>
               </div>
             )}
-            <div className={styles.meta}>
-              <b>
-                {hasChildren
-                  ? `${member.children.length} ${
-                      member.children.length === 1 ? "Child" : "Children"
+            {(member.id === "V.1") ? (
+              <div className={styles.meta} style={{ visibility: "hidden" }}>
+                <b>0 Children</b>
+              </div>
+            ) : (
+              <div className={styles.meta}>
+                <b>
+                  {hasChildren
+                    ? `${member.children.length} ${member.children.length === 1 ? "Child" : "Children"
                     }`
-                  : ""}
-              </b>
-            </div>
+                    : <span>&nbsp;</span>}
+                </b>
+              </div>
+            )}
+
             {/* {member.name !== "Panamthottam" && (
               <div className={styles.meta}>
                 <b>Father - {member.father ?? ""}</b>
@@ -134,13 +140,16 @@ export default function MemberCard({
 
         {isAdmin && member.name !== "Filtered Results" && (
           <div className={styles.buttonContainer}>
-            <button onClick={() => onAddChild(member)}>Add Child</button>
-            <button onClick={() => onEdit(member)}>Edit</button>
-            {member.generation !== 1 && (
-              <button onClick={() => onDelete(member.id)}>Delete</button>
+            {member.id !== "V.1" && (
+              <>
+                <button onClick={() => onAddChild(member)}>Add Child</button>
+                <button onClick={() => onEdit(member)}>Edit</button>
+                <button onClick={() => onDelete(member.id)}>Delete</button>
+              </>
             )}
           </div>
         )}
+
 
         {hasChildren && (
           <button className={styles.toggleBtn} onClick={toggleChildren}>
@@ -174,16 +183,14 @@ export default function MemberCard({
             <div className={styles.verticalLineWithArrow}></div>
           )}
           <div
-            className={`${styles.children} ${
-              member.children.length === 1 ? styles.singleOnlyChild : ""
-            }`}
+            className={`${styles.children} ${member.children.length === 1 ? styles.singleOnlyChild : ""
+              }`}
           >
             {member.children.map((child, index) => (
               <div
                 key={index}
-                className={`${styles.childWrapper} ${
-                  member.children.length === 1 ? styles.singleOnlyChild : ""
-                }`}
+                className={`${styles.childWrapper} ${member.children.length === 1 ? styles.singleOnlyChild : ""
+                  }`}
               >
                 <span className={styles.downArrow}></span>
                 <MemberCard
